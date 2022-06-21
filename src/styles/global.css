@@ -1,3 +1,7 @@
+:root {
+  font-size: 16px;
+  --el-avatar-size: 32px;
+}
 
 html,
 body {

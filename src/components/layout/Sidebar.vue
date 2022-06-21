@@ -57,14 +57,17 @@ defineExpose({ setIsCollapse })
 /* 网站名称 */
 .web-title {
   height: 60px;
-  border-bottom: 1px solid var(--el-menu-border-color);
   display: flex;
   align-items: center;
+  box-sizing: border-box;
   justify-content: center;
+  border-bottom: 1px solid var(--el-menu-border-color);
 }
-.el-menu-vertical-demo{
- height: 100%;
+
+.el-menu-vertical-demo {
+  height: 100%;
 }
+
 .el-menu-vertical-demo.el-menu--collapse {
   width: 63px;
 }
