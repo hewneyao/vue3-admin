@@ -1,17 +1,18 @@
 <template >
-
-  <el-menu default-active="2" class="el-menu-vertical-demo" :collapse="isCollapse" @open="handleOpen"
+  <el-menu default-active="2" class="el-menu-vertical-demo" :collapse="isCollapse" @open="handleOpen" router
     @close="handleClose">
     <div class="web-title">
       <span v-show="!isCollapse">Vue3-admin</span>
       <span v-show="isCollapse">A</span>
     </div>
     <!-- 菜单 -->
-    <el-menu-item index="1">
+    <el-menu-item index="/dashboard" >
       <el-icon>
         <icon-menu />
       </el-icon>
-      <template #title>首页</template>
+      <template #title>
+        仪表盘
+      </template>
     </el-menu-item>
   </el-menu>
 </template>
