@@ -21,7 +21,15 @@ export default defineConfig({
     }),
     Components({
       resolvers: [ElementPlusResolver()],
-    })
+    }),
+    [
+      "import",
+      {
+        "libraryName": "@icon-park/vue-next",
+        "libraryDirectory": "es/icons",
+        "camel2DashComponentName": false
+      }
+    ]
   ],
   resolve: {
     // 配置别名 @/ = ./src

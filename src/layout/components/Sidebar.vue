@@ -20,10 +20,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 import {
-  Document,
   Menu as IconMenu,
-  Location,
-  Setting,
 } from '@element-plus/icons-vue'
 
 // 声明 props

@@ -11,8 +11,8 @@
         </el-form-item>
       </el-form>
       <div style="display:flex;">
-        <el-button type="primary" @click="submitLogin(ruleFormRef)">登录</el-button>
         <el-button type="danger" @click="resetForm(ruleFormRef)">重置</el-button>
+        <el-button type="primary" @click="submitLogin(ruleFormRef)">登录</el-button>
       </div>
     </div>
   </div>
@@ -21,12 +21,22 @@
 <script setup lang="ts">
 import { ref, reactive } from 'vue'
 import type { FormInstance, FormRules } from 'element-plus'
+// 引入用户登录 API
+import { login } from '@/api/user'
+
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+interface LoginForm {
+  account: string;
+  password: string;
+}
 
 // 获取表单引用
 const ruleFormRef = ref<FormInstance>()
 
 // 登录表单
-const loginForm = reactive({ account: "", password: "" })
+const loginForm: LoginForm = reactive({ account: "", password: "" })
 
 // 定义校验规则
 const rules = reactive<FormRules>({
@@ -44,10 +54,17 @@ const rules = reactive<FormRules>({
 const submitLogin = async (form: FormInstance | undefined) => {
   if (!form) return
   // 校验表单
-  await form.validate((valid, fields) => {
+  await form.validate(async (valid, fields) => {
     if (valid) {
       // 提交登录请求
-      console.log('submit!')
+      // const { data: res } = await login(loginForm)
+      // if (res['code'] === 200) {
+      //   console.log("登录成功");
+      //   return;
+      // }
+      // 跳转到首页
+      router.push("/")
+      // 登录失败
     } else {
       // 表单校验错误
       console.log('error submit!', fields)
