@@ -1,5 +1,5 @@
 <template>
-  <PageContainer src="//player.bilibili.com/player.html?aid=470042813&bvid=BV1MT411G7fG&cid=749679257&page=1"/>
+  <PageContainer src="https://www.baidu.com/"/>
 </template>
 
 <script setup lang="ts">

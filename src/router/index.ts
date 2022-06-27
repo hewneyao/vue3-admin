@@ -30,6 +30,16 @@ const routes: Array<RouteRecordRaw> = [
       { path: 'publish', component: () => import("@/pages/article/Index.vue"), meta: { title: "文章管理" } }
     ]
   },
+   // 外部页面
+   {
+    path: '/table',
+    name: 'table',
+    component: () => import("@/layout/Index.vue"),
+    children: [
+      { path: 'paging-table', component: () => import("@/pages/table/PagingTable.vue"), meta: { title: "分页表格" } },
+      { path: 'baidu', component: () => import("@/pages/table/PagingTable.vue"), meta: { title: "百度" } }
+    ]
+  },
   // 外部页面
   {
     path: '/outpage',
@@ -38,13 +48,6 @@ const routes: Array<RouteRecordRaw> = [
     children: [
       { path: 'bilibili', component: () => import("@/pages/outpage/Bilibili.vue"), meta: { title: "哔哩哔哩" } },
       { path: 'baidu', component: () => import("@/pages/outpage/Baidu.vue"), meta: { title: "百度" } }
-    ]
-  },
-  {
-    path: '/baidu',
-    name: 'baidu',
-    component: () => import("@/layout/Index.vue"),    // 设置布局文件
-    children: [{ path: '', component: () => import("@/pages/externalpage/BaiduPage.vue"), meta: { title: "百度" } }
     ]
   },
   // 错误页面处理

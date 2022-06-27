@@ -22,7 +22,24 @@
         文章管理
       </template>
     </el-menu-item>
-
+    <el-sub-menu index="2">
+      <template #title>
+        <el-icon>
+          <TableFile theme="outline" size="24" fill="#333" />
+        </el-icon>
+        <span>表格</span>
+      </template>
+      <el-menu-item index="/table/paging-table">
+        <template #title>
+          分页表格
+        </template>
+      </el-menu-item>
+      <el-menu-item index="/outpage/baidu">
+        <template #title>
+          无限表格
+        </template>
+      </el-menu-item>
+    </el-sub-menu>
     <el-sub-menu index="1">
       <template #title>
         <el-icon>
@@ -46,11 +63,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-import {
-  Menu as IconMenu,
-} from '@element-plus/icons-vue'
-import { Page, Dashboard } from '@icon-park/vue-next/es/map';
+import { ref } from 'vue'
+import { Page, Dashboard, TableFile } from '@icon-park/vue-next/es/map';
 // 声明 props
 const props = defineProps({
   isCollapse: {
