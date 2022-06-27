@@ -6,14 +6,42 @@
       <span v-show="isCollapse">A</span>
     </div>
     <!-- 菜单 -->
-    <el-menu-item index="/dashboard" >
+    <el-menu-item index="/dashboard">
       <el-icon>
-        <icon-menu />
+        <Dashboard theme="outline" size="24" fill="#333" />
       </el-icon>
       <template #title>
         仪表盘
       </template>
     </el-menu-item>
+    <el-menu-item index="/acticle">
+      <el-icon>
+        <Dashboard theme="outline" size="24" fill="#333" />
+      </el-icon>
+      <template #title>
+        文章管理
+      </template>
+    </el-menu-item>
+
+    <el-sub-menu index="1">
+      <template #title>
+        <el-icon>
+          <Page theme="outline" size="24" fill="#333" />
+        </el-icon>
+        <span>外部页面</span>
+      </template>
+      <el-menu-item index="/outpage/bilibili">
+        <template #title>
+          哔哩哔哩
+        </template>
+      </el-menu-item>
+      <el-menu-item index="/outpage/baidu">
+        <template #title>
+          百度
+        </template>
+      </el-menu-item>
+    </el-sub-menu>
+
   </el-menu>
 </template>
 
@@ -22,7 +50,7 @@ import { ref, watch } from 'vue'
 import {
   Menu as IconMenu,
 } from '@element-plus/icons-vue'
-
+import { Page, Dashboard } from '@icon-park/vue-next/es/map';
 // 声明 props
 const props = defineProps({
   isCollapse: {

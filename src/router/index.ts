@@ -20,6 +20,26 @@ const routes: Array<RouteRecordRaw> = [
       { path: '', component: () => import("@/pages/dashboard/Index.vue"), meta: { title: "仪表盘" } }
     ]
   },
+  // 文章管理
+  {
+    path: '/acticle',
+    name: 'articleManager',
+    component: () => import("@/layout/Index.vue"),
+    children: [
+      { path: '', component: () => import("@/pages/article/Index.vue"), meta: { title: "文章管理" } },
+      { path: 'publish', component: () => import("@/pages/article/Index.vue"), meta: { title: "文章管理" } }
+    ]
+  },
+  // 外部页面
+  {
+    path: '/outpage',
+    name: 'outpage',
+    component: () => import("@/layout/Index.vue"),
+    children: [
+      { path: 'bilibili', component: () => import("@/pages/outpage/Bilibili.vue"), meta: { title: "哔哩哔哩" } },
+      { path: 'baidu', component: () => import("@/pages/outpage/Baidu.vue"), meta: { title: "百度" } }
+    ]
+  },
   {
     path: '/baidu',
     name: 'baidu',

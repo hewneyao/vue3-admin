@@ -1,9 +1,9 @@
 <template >
-  我是仪表盘
+  <CellDiagramVue></CellDiagramVue>
 </template>
 
 <script setup lang="ts">
-
+import CellDiagramVue from './components/CellDiagram.vue';
 </script>
 
 <style scoped>
