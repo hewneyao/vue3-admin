@@ -8,3 +8,8 @@ body {
   height: 100%;
   width: 100%;
 }
+
+/* 修改 el-card 样式 */
+.el-card {
+  --el-card-border-radius: 10px;
+}

@@ -1,7 +1,7 @@
 <!-- 通知组件 -->
 <template >
   <div class="notice-container">
-    <el-badge :value="3" class="item">
+    <el-badge :value="3">
       <Remind ref="remindRef" theme="outline" size="18" fill="#333" style="cursor: pointer;" />
     </el-badge>
     

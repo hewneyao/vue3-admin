@@ -113,8 +113,6 @@ function swtichCollapseChange() {
   font-size: 24px;
 }
 
-
-
 .main-container {
   height: 100%;
 }
