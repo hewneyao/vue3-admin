@@ -34,11 +34,6 @@
           分页表格
         </template>
       </el-menu-item>
-      <el-menu-item index="/outpage/baidu">
-        <template #title>
-          无限表格
-        </template>
-      </el-menu-item>
     </el-sub-menu>
     <el-sub-menu index="1">
       <template #title>

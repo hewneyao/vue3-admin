@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@icon-park/vue-next": "^1.4.1",
+    "@wangeditor/editor": "^5.1.9",
+    "@wangeditor/editor-for-vue": "^5.1.12",
     "animate.css": "^4.1.1",
     "axios": "^0.27.2",
     "echarts": "^5.3.3",
