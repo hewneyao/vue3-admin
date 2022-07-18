@@ -14,19 +14,19 @@
         仪表盘
       </template>
     </el-menu-item>
-    <el-menu-item index="/acticleM">
-      <el-icon>
-        <Dashboard theme="outline" size="24" fill="#333" />
-      </el-icon>
+    <el-sub-menu index="1">
       <template #title>
+        <el-icon>
+          <Dashboard theme="outline" size="24" fill="#333" />
+        </el-icon>
         文章管理
       </template>
-       <el-menu-item index="/acticle">
+      <el-menu-item index="/acticle">
         <template #title>
           文章发布
         </template>
       </el-menu-item>
-    </el-menu-item>
+    </el-sub-menu>
     <el-sub-menu index="2">
       <template #title>
         <el-icon>
