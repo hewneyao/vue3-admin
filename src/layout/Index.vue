@@ -113,8 +113,5 @@ function swtichCollapseChange() {
   font-size: 24px;
 }
 
-.main-container {
-  height: 100%;
-}
 </style>
 <!-- 组件样式 end -->
