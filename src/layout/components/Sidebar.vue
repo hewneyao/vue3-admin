@@ -14,6 +14,24 @@
         仪表盘
       </template>
     </el-menu-item>
+    <el-sub-menu index="1-1">
+      <template #title>
+        <el-icon>
+          <Dashboard theme="outline" size="24" fill="#333" />
+        </el-icon>
+        组件
+      </template>
+      <el-menu-item index="/acticle">
+        <template #title>
+          Markdown 编辑器
+        </template>
+      </el-menu-item>
+      <el-menu-item index="/acticle">
+        <template #title>
+          富文本编辑器
+        </template>
+      </el-menu-item>
+    </el-sub-menu>
     <el-sub-menu index="1">
       <template #title>
         <el-icon>
@@ -102,6 +120,8 @@ defineExpose({ setIsCollapse })
   box-sizing: border-box;
   justify-content: center;
   border-bottom: 1px solid var(--el-menu-border-color);
+  background-color: rgb(48, 65, 86);
+  color: white;
 }
 
 .el-menu-vertical-demo {

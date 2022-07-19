@@ -1,16 +1,13 @@
 <template >
-  <el-card>
-    <el-form :inline="true" :model="formInline" class="demo-form-inline">
-      <el-form-item label="文章标题">
-        <el-input v-model="formInline.user" style="width:1000px" placeholder="请输入文章标题" />
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="onSubmit">发布</el-button>
-      </el-form-item>
-    </el-form>
-    <Editor></Editor>
-  </el-card>
-
+  <el-form :inline="true" :model="formInline" class="demo-form-inline">
+    <el-form-item label="文章标题">
+      <el-input v-model="formInline.user" style="width:1000px" placeholder="请输入文章标题" />
+    </el-form-item>
+    <el-form-item>
+      <el-button type="primary" @click="onSubmit">发布</el-button>
+    </el-form-item>
+  </el-form>
+  <Editor></Editor>
 </template>
 
 <script setup lang="ts">
