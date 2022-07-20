@@ -1,5 +1,6 @@
 <template >
-  <el-menu default-active="2" class="el-menu-vertical-demo" :collapse="isCollapse" @open="handleOpen" router
+  <el-menu active-text-color="rgb(64, 158, 255)" background-color="rgb(48, 65, 86)" class="el-menu-vertical-demo" default-active="2"
+    text-color="#fff"  :collapse="isCollapse" @open="handleOpen" router
     @close="handleClose">
     <div class="web-title">
       <span v-show="!isCollapse">Vue3-admin</span>
@@ -8,7 +9,7 @@
     <!-- 菜单 -->
     <el-menu-item index="/dashboard">
       <el-icon>
-        <Dashboard theme="outline" size="24" fill="#333" />
+        <Dashboard theme="outline" size="24" fill="#FFF" />
       </el-icon>
       <template #title>
         仪表盘
@@ -17,7 +18,7 @@
     <el-sub-menu index="1-1">
       <template #title>
         <el-icon>
-          <Dashboard theme="outline" size="24" fill="#333" />
+          <Components theme="outline" size="24" fill="#FFF" />
         </el-icon>
         组件
       </template>
@@ -26,7 +27,7 @@
           Markdown 编辑器
         </template>
       </el-menu-item>
-      <el-menu-item index="/acticle">
+      <el-menu-item index="">
         <template #title>
           富文本编辑器
         </template>
@@ -35,11 +36,11 @@
     <el-sub-menu index="1">
       <template #title>
         <el-icon>
-          <Dashboard theme="outline" size="24" fill="#333" />
+          <Dashboard theme="outline" size="24" fill="#FFF" />
         </el-icon>
         文章管理
       </template>
-      <el-menu-item index="/acticle">
+      <el-menu-item index="/act">
         <template #title>
           文章发布
         </template>
@@ -48,7 +49,7 @@
     <el-sub-menu index="2">
       <template #title>
         <el-icon>
-          <TableFile theme="outline" size="24" fill="#333" />
+          <TableFile theme="outline" size="24" fill="#FFF" />
         </el-icon>
         <span>表格</span>
       </template>
@@ -61,7 +62,7 @@
     <el-sub-menu index="1">
       <template #title>
         <el-icon>
-          <Page theme="outline" size="24" fill="#333" />
+          <Page theme="outline" size="24" fill="#FFF" />
         </el-icon>
         <span>外部页面</span>
       </template>
@@ -82,7 +83,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Page, Dashboard, TableFile } from '@icon-park/vue-next/es/map';
+import { Page, Dashboard, TableFile ,Components} from '@icon-park/vue-next/es/map';
 // 声明 props
 const props = defineProps({
   isCollapse: {
