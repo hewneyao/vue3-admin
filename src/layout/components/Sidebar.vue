@@ -33,19 +33,6 @@
         </template>
       </el-menu-item>
     </el-sub-menu>
-    <el-sub-menu index="1">
-      <template #title>
-        <el-icon>
-          <Dashboard theme="outline" size="24" fill="#FFF" />
-        </el-icon>
-        文章管理
-      </template>
-      <el-menu-item index="/act">
-        <template #title>
-          文章发布
-        </template>
-      </el-menu-item>
-    </el-sub-menu>
     <el-sub-menu index="2">
       <template #title>
         <el-icon>
