@@ -26,8 +26,8 @@ const routes: Array<RouteRecordRaw> = [
     name: 'articleManager',
     component: () => import("@/layout/Index.vue"),
     children: [
-      { path: '', component: () => import("@/pages/article/Index.vue"), meta: { title: "文章管理" } },
-      { path: 'publish', component: () => import("@/pages/article/Index.vue"), meta: { title: "文章管理" } }
+      { path: '', component: () => import("@/pages/article/Index.vue"), meta: { title: "Markdown 编辑器" } },
+      { path: 'publish', component: () => import("@/pages/article/Index.vue"), meta: { title: "Markdown 编辑器" } }
     ]
   },
    // 外部页面
